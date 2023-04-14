@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ChatGPT App</title>
+</head>
+
+<body>
+    <h1>ChatGPT App</h1>
+    <form method="post" action="{{ url_for('process') }}">
+        <label for="user_input">Enter your message:</label><br>
+        <input type="text" name="user_input" placeholder="Ask me something...">
+        <input type="submit" value="Submit">
+    </form>
+    {% if reply_content %}
+    <p><strong>Bot:</strong> {{ reply_content }}</p>
+    {% endif %}
+</body>
+
+</html>
+
+
+</html>
