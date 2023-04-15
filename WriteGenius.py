@@ -13,16 +13,16 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/process', methods=['POST'])
-def process():
+@app.route('/submit', methods=['POST'])
+def submit():
     user_input = request.form['user_input']
-    # Process the user input
+    # Submit the user input
     messages = [
         {"role": "user", "content": f'rewrite the following: {user_input}'},
     ]
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        temperature=0.3,
+        temperature=0.4,
         messages=messages,
     )
     reply_content = completion.choices[0].message.content
