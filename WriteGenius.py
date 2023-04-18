@@ -2,7 +2,7 @@ import openai
 import os
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 
 openai.api_key = os.getenv("API_KEY")
