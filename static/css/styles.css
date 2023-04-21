@@ -1,82 +1,125 @@
 /* Set mobile-first layout with a black background */
 @media (max-width: 767px) {
     body {
-        background-color: #000000;
+        background-image: url(/static/images/mobile-img.jpg);
         color: #ffffff;
         font-family: Arial, sans-serif;
         font-size: 16px;
         line-height: 1.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
 
     /* Add a dark grey container with padding */
     .container {
         background-color: #222222;
-        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.93);
+        border: 2px solid white;
+        padding: 25px;
+        width: 80%;
         max-width: 600px;
         margin: 0 auto;
         box-sizing: border-box;
+        line-height: 1.5;
+        border-radius: 15px;
     }
 
     /* Style the title and description */
     .container h1 {
         color: #ffffff;
-        font-size: 24px;
+        font-size: 22px;
         font-weight: bold;
         margin-top: 0;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     .container p {
         color: #ffffff;
         font-size: 16px;
         margin-bottom: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     /* Style the input field */
-    .container input[type="text"] {
+    .container textarea {
         width: 100%;
+        height: 150px;
         padding: 10px;
         margin-bottom: 20px;
         box-sizing: border-box;
         border: 2px solid #ffffff;
         border-radius: 5px;
         font-size: 16px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .container textarea::placeholder {
+        position: absolute;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     /* Style the button */
-    .container button {
+    input[type="submit" i] {
         background-color: #ff9900;
         border: none;
         color: #ffffff;
         padding: 10px 20px;
         font-size: 16px;
         border-radius: 5px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #copy {
+        background-color: whitesmoke;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
         cursor: pointer;
+        display: block;
+        margin: 0 auto;
     }
 }
 
 /* Add media query for larger screens */
 @media (min-width: 768px) {
 
-    body,
-    html {
-        background-image: url("/static/images/desktop-img.jpg");
-        background-repeat: no-repeat;
-        background-position: center center;
+    body {
+        background-image: url(/static/images/desktop-img.jpg);
         color: #ffffff;
         font-family: Arial, sans-serif;
         font-size: 16px;
         line-height: 1.5;
-        margin: 0px;
-        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
 
     /* Add a dark grey container with padding */
     .container {
         background-color: #222222;
+        background-color: rgba(0, 0, 0, 0.93);
+        border: 2px solid white;
         padding: 25px;
-        max-width: 750px;
+        width: 80%;
+        max-width: 700px;
         margin: 0 auto;
         box-sizing: border-box;
+        line-height: 1.5;
+        border-radius: 15px;
     }
 
     /* Style the title and description */
@@ -85,23 +128,40 @@
         font-size: 24px;
         font-weight: bold;
         margin-top: 0;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .container textarea::placeholder {
+        position: absolute;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    label {
+        display: block;
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     .container p {
         color: #ffffff;
-        font-size: 160px;
+        font-size: 16px;
         margin-bottom: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     /* Style the input field */
-    .container input[type="text"] {
+    .container textarea {
         width: 100%;
+        height: 160px;
         padding: 10px;
         margin-bottom: 20px;
         box-sizing: border-box;
         border: 2px solid #ffffff;
         border-radius: 5px;
         font-size: 16px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     /* Style the button */
@@ -113,5 +173,19 @@
         font-size: 16px;
         border-radius: 5px;
         cursor: pointer;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #copy {
+        background-color: whitesmoke;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
     }
 }

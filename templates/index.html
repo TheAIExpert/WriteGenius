@@ -10,15 +10,29 @@
     <div class="container">
         <h1>WriteGenius</h1>
         <form method="post" action="{{ url_for('submit') }}">
-            <label for="user_input">Write better and faster with WriteGenius.</label><br>
-            <input type="text" name="user_input" placeholder="Enter your message">
+            <label for="user_input" id="label">Write any text below and<br>
+                Rewrite like a pro in seconds.</label><br>
+            <textarea name="user_input" placeholder="Enter your message"></textarea>
             <input type="submit" value="Submit">
         </form>
         {% if reply_content %}
-        <p><strong>Bot:</strong> {{ reply_content }}</p>
+        <p id="response-container">{{ reply_content }}</p>
+
+        <button onclick="copyText()" id="copy">Copy</button>
         {% endif %}
     </div>
+    <script>
+        function copyText() {
+            let copyText = document.getElementById("response-container").textContent;
+            navigator.clipboard.writeText(copyText).then(function () {
+                console.log("Text copied to clipboard");
+            }, function () {
+                console.error("Error copying text to clipboard");
+            });
+        }
+    </script>
 </body>
+
 
 </html>
 

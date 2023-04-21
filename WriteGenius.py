@@ -18,11 +18,12 @@ def submit():
     user_input = request.form['user_input']
     # Submit the user input
     messages = [
-        {"role": "user", "content": f'rewrite the following: {user_input}'},
+        {"role": "user",
+            "content": f'Please rewrite the following text: {user_input}'},
     ]
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        temperature=0.4,
+        temperature=0.6,
         messages=messages,
     )
     reply_content = completion.choices[0].message.content
