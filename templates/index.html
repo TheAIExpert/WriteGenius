@@ -8,30 +8,29 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>WriteGenius</h1>
+    <div id="app-container">
+        <h1 id="app-name">WriteGenius</h1>
+        <p id="description">Rewrite like a pro in seconds</p>
         <form method="post" action="{{ url_for('submit') }}">
-            <label for="user_input" id="label">Write any text below and<br>
-                Rewrite like a pro in seconds.</label><br>
-            <textarea name="user_input" placeholder="Enter your message"></textarea>
-            <input type="submit" value="Submit">
+            <textarea id="input-field" placeholder="Enter text here..."></textarea>
+            <button id="submit-button">Submit</button>
         </form>
         {% if reply_content %}
         <p id="response-container">{{ reply_content }}</p>
 
         <button onclick="copyText()" id="copy">Copy</button>
         {% endif %}
+        <script>
+            function copyText() {
+                let copyText = document.getElementById("response-container").textContent;
+                navigator.clipboard.writeText(copyText).then(function () {
+                    console.log("Text copied to clipboard");
+                }, function () {
+                    console.error("Error copying text to clipboard");
+                });
+            }
+        </script>
     </div>
-    <script>
-        function copyText() {
-            let copyText = document.getElementById("response-container").textContent;
-            navigator.clipboard.writeText(copyText).then(function () {
-                console.log("Text copied to clipboard");
-            }, function () {
-                console.error("Error copying text to clipboard");
-            });
-        }
-    </script>
 </body>
 
 
