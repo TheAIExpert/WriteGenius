@@ -1,11 +1,10 @@
 import openai
-import os
 from flask import Flask, render_template, request
 
 app = Flask(__name__, static_url_path='/static')
 
 
-openai.api_key = os.getenv("API_KEY")
+openai.api_key = "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"
 
 
 @app.route('/')
@@ -23,7 +22,7 @@ def submit():
     ]
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        temperature=0.6,
+        temperature=0.5,
         messages=messages,
     )
     reply_content = completion.choices[0].message.content
