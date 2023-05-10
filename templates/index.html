@@ -12,7 +12,7 @@
         <h1 id="app-name">WriteGenius</h1>
         <p id="description">Rewrite like a pro in seconds</p>
         <form method="post" action="{{ url_for('submit') }}">
-            <textarea id="input-field" placeholder="Enter text here..."></textarea>
+            <textarea id="user_input" name="user_input" placeholder="Enter text here..."></textarea>
             <button id="submit-button">Submit</button>
         </form>
         {% if reply_content %}
