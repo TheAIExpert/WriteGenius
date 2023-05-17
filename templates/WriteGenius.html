@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&family=Russo+One&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&family=Reem+Kufi+Fun" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
@@ -16,9 +15,18 @@
     <div id="app-container">
         <h1 id="app-name">WriteGenius</h1>
         <p id="description">Rewrite like a pro in seconds. <br> Tap into your inner genius.</p>
-        <form method="post" action="{{ url_for('submit') }}">
-            <textarea id="user_input" name="user_input" placeholder="Enter text here..."></textarea>
-            <button id="submit-button">Submit</button>
+        <br>
+        <div class="centre-wrapper">
+            <form id="form" method="post" action="{{ url_for('submit') }}">
+                <label for="option" id="style">Select a style:</label>
+                <select id="option" name="option">
+                    <option value="option1">Professional</option>
+                    <option value="option2">Social Media</option>
+                    <option value="option3">Option 3</option>
+                </select>
+        </div>
+        <textarea id="user_input" name="user_input" placeholder="Enter text here..."></textarea>
+        <button id="submit-button">Submit</button>
         </form>
         {% if reply_content %}
         <p id="response-container">{{ reply_content }}</p>
