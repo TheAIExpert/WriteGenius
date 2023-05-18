@@ -16,22 +16,29 @@
         <h1 id="app-name">WriteGenius</h1>
         <p id="description">Rewrite like a pro in seconds. <br> Tap into your inner genius.</p>
         <br>
+        {% if reply_content %}
+        <div class="box">
+            <p id="response-page-title">Original</p>
+            <p id="response-page">{{ user_input }}</p>
+        </div>
+        <br>
+        <div class="box">
+            <p id="response-page-title">New</p>
+            <p id="response-page">{{ reply_content }}</p>
+            <button onclick="copyText()" id="button">Copy</button>
+        </div>
+        {% else %}
         <div class="centre-wrapper">
             <form id="form" method="post" action="{{ url_for('submit') }}">
                 <label for="option" id="style">Select a style:</label>
                 <select id="option" name="option">
                     <option value="option1">Professional</option>
                     <option value="option2">Social Media</option>
-                    <option value="option3">Option 3</option>
                 </select>
         </div>
         <textarea id="user_input" name="user_input" placeholder="Enter text here..."></textarea>
         <button id="submit-button">Submit</button>
         </form>
-        {% if reply_content %}
-        <p id="response-container">{{ reply_content }}</p>
-
-        <button onclick="copyText()" id="copy">Copy</button>
         {% endif %}
         <script>
             function copyText() {

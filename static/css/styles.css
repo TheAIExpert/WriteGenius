@@ -11,15 +11,33 @@
         display: flex;
         justify-content: center;
         height: 100vh;
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
-    #result {
-        background-color: black;
-        color: #fff;
+
+    .box {
         border-radius: 10px;
-        padding: 15px;
-        font-family: 'CustomFont2', sans-serif;
+        background-color: #28282A;
+        border: 1px solid #6fc7b9;
+        font-family: 'Reem Kufi Fun', sans-serif;
+        font-size: 1rem;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #response-page-title {
+        text-align: center;
+        margin: 0%;
+        color: #6fc7b9;
+    }
+
+    #response-page {
+        text-align: center;
+        margin: 0%;
+        font-size: 1.25rem;
     }
 
     .dropdown {
@@ -80,7 +98,7 @@
     #description {
         text-align: center;
         font-size: 1.5rem;
-        font-family: 'Mulish', sans-serif;
+        font-family: 'Reem Kufi Fun', sans-serif;
         margin: 0%;
     }
 
@@ -91,6 +109,7 @@
 
     #style {
         font-family: 'Reem Kufi Fun', sans-serif;
+        font-size: 1rem;
     }
 
     #option {
@@ -98,6 +117,7 @@
         background-color: #28282A;
         color: white;
         border-color: #6fc7b9;
+        font-size: 1rem;
     }
 
     #user_input {
@@ -122,19 +142,31 @@
         font-size: 1.1rem;
     }
 
-    #submit-button {
-        display: block;
-        margin: 30px auto;
+    #button {
+        display: inline-block;
+        margin: 10px;
         background-color: #6fc7b9;
         color: white;
         font-size: 1rem;
         text-shadow: 1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000;
+        font-family: 'Reem Kufi Fun', sans-serif;
         border: none;
-        padding: 10px 20px;
+        padding: 5px 20px;
         border-radius: 5px;
     }
 
-
+    #submit-button {
+        display: inline-block;
+        margin: 30px auto;
+        background-color: #6fc7b9;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Reem Kufi Fun', sans-serif;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-shadow: 1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000;
+    }
 }
 
 @media (min-width: 768px) {
@@ -150,12 +182,29 @@
         margin-top: 0px;
     }
 
-    #result {
-        background-color: black;
-        color: #fff;
+    .box {
         border-radius: 10px;
-        padding: 15px;
-        font-family: 'CustomFont2', sans-serif;
+        background-color: #28282A;
+        border: 1px solid #6fc7b9;
+        font-family: 'Reem Kufi Fun', sans-serif;
+        font-size: 1rem;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #response-page-title {
+        text-align: center;
+        margin: 0%;
+        color: #6fc7b9;
+    }
+
+    #response-page {
+        text-align: center;
+        margin: 0%;
+        font-size: 1.25rem;
     }
 
     .dropdown {
@@ -215,7 +264,7 @@
     #description {
         text-align: center;
         font-size: 1.5rem;
-        font-family: 'Mulish', sans-serif;
+        font-family: 'Reem Kufi Fun', sans-serif;
         margin: 0%;
     }
 
@@ -226,6 +275,7 @@
 
     #style {
         font-family: 'Reem Kufi Fun', sans-serif;
+        font-size: 1rem;
     }
 
     #option {
@@ -233,6 +283,7 @@
         background-color: #28282A;
         color: white;
         border-color: #6fc7b9;
+        font-size: 1rem;
     }
 
     #user_input {
@@ -257,8 +308,21 @@
         font-size: 1.1rem;
     }
 
+    #button {
+        display: inline-block;
+        margin: 10px;
+        background-color: #6fc7b9;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        padding: 5px 20px;
+        border-radius: 5px;
+        font-family: 'Reem Kufi Fun', sans-serif;
+        text-shadow: 1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000;
+    }
+
     #submit-button {
-        display: block;
+        display: inline-block;
         margin: 30px auto;
         background-color: #6fc7b9;
         color: white;
@@ -266,6 +330,7 @@
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
+        font-family: 'Reem Kufi Fun', sans-serif;
         text-shadow: 1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000;
     }
 }

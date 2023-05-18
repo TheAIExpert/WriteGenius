@@ -38,7 +38,7 @@ def submit():
             messages=messages,
     )
     reply_content = completion.choices[0].message.content
-    return render_template('WriteGenius.html', reply_content=reply_content)
+    return render_template('WriteGenius.html', reply_content=reply_content, user_input=user_input)
     
 
 if __name__ == '__main__':
